@@ -11,5 +11,16 @@ namespace Passenger.Core.Domain
         public DateTime UpdatedAt { get; private set; }
         public IEnumerable<Route> Routes { get; protected set; }
         public IEnumerable<DailyRoute> DailyRoutes { get; protected set; }
+
+        protected Driver()
+        {
+            
+        }
+
+        public Driver(Guid userid)
+        {
+            UserId = userid;
+        }
+
     }
 }
