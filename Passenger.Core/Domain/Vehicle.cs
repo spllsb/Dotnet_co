@@ -19,7 +19,7 @@ namespace Passenger.Core.Domain
             SetSeats(seats);
         }
 
-        public void SetBrand(string brand)
+        private void SetBrand(string brand)
         {
             if (string.IsNullOrWhiteSpace(brand))
             {
@@ -32,7 +32,7 @@ namespace Passenger.Core.Domain
             Brand = brand;
         }
 
-        public void SetName(string name)
+        private void SetName(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
@@ -45,7 +45,7 @@ namespace Passenger.Core.Domain
             Name = name;
         }
 
-        public void SetSeats(int seats)
+        private void SetSeats(int seats)
         {
 
             if (seats < 0) 

@@ -29,7 +29,7 @@ namespace Passenger.Core.Domain
             Salt = salt;
             CreatedAt = DateTime.UtcNow;
         }
-         public void SetUsername(string username) 
+        public void SetUsername(string username) 
         {
             if (!NameRegex.IsMatch(username)) 
             {
@@ -71,7 +71,7 @@ namespace Passenger.Core.Domain
                 throw new Exception("Password can not contain more than 100 characters.");
             }
 
-           if (Password == password)
+            if (Password == password)
             {
                 return;
             }
