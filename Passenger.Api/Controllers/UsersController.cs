@@ -27,10 +27,11 @@ namespace Passenger.Api.Controllers
             => await _userService.GetAsync(email);
 
         [HttpPost("")]
-        public async Task Post([FromBody]CreateUser request)
+        public async Task<IActionResult> Post ([FromBody]CreateUser command)
         {
-            // await _commandDispatcher.DispatchAsync(command);
-            await _userService.RegisterAsync(request.Email, request.Username, request.Password);
+            await _commandDispatcher.DispatchAsync(command);
+            // await _userService.RegisterAsync(request.Email, request.Username, request.Password);
+            return Created($"users/{command.Email}", new object());
         }
     }
 }
