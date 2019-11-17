@@ -1,5 +1,7 @@
-GET http://localhost:5000/api/users/user10@email.com
+GET http://localhost:5000/api/users/user1@email.com
 
+###
+GET http://localhost:5000/api/users/user10@email.com
 ###
 
 POST http://localhost:5000/api/users/ HTTP/1.1
@@ -10,5 +12,7 @@ content-type: application/json
     "password": "secret",
     "username": "user10"
 }
+###
 
+GET http://localhost:5000/api/users/user10@email.com
 ###

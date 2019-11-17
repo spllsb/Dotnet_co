@@ -36,6 +36,5 @@ namespace Passenger.Infrastructure.Services
             user = new User(email, username, password, salt);
             await _userRepository.AddAsync(user);
         }
-
     }
 }
